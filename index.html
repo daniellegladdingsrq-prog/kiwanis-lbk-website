@@ -92,6 +92,15 @@ p{margin:0}
 .contact p{color:var(--muted)}
 .contact .big{font:400 22px/1.3 var(--display);color:var(--ink);user-select:all}
 
+
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--body);text-decoration:none;padding:14px 20px;border-radius:999px;border:2px solid var(--navy)}
+.btn.primary{background:var(--navy);color:var(--navy-ink)}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn:hover{filter:brightness(1.08)}
+.forms{display:grid;gap:12px;margin-top:22px}
+.forms .btn{justify-content:center}
+.steps{margin:18px 0 0;padding-left:22px;display:grid;gap:8px;color:var(--muted)}
 footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:760px){
@@ -112,6 +121,8 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
       <a href="#causes">Our causes</a>
       <a href="#join">Join</a>
       <a href="#contact">Contact</a>
+      <a href="https://www.lbklawnparty.org" target="_blank" rel="noopener">Lawn Party</a>
+      <a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook</a>
     </nav>
   </header>
 
@@ -121,6 +132,11 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
       <h1>Neighbors on <em>Longboat Key</em>, working for local kids.</h1>
       <p class="lede">The Kiwanis Club of Longboat Key is a volunteer service club, part of Kiwanis International. We meet for breakfast every Thursday, raise money at events like the Pancake Breakfast and the Lawn Party by the Bay, and put it to work for children here at home.</p>
       <p class="since"><b>1972</b> Founded as the Kiwanis Club of the Sarasota Keys</p>
+      <div class="btns">
+        <a class="btn primary" href="#join">Become a member</a>
+        <a class="btn ghost" href="https://www.lbklawnparty.org" target="_blank" rel="noopener">Lawn Party tickets</a>
+        <a class="btn ghost" href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Follow us on Facebook</a>
+      </div>
     </div>
     <aside class="meeting" aria-labelledby="meet-h">
       <p class="eyebrow">Join us for breakfast</p>
@@ -180,18 +196,25 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
 
   <section class="join" id="join" aria-labelledby="join-h">
     <div>
-      <p class="eyebrow">Membership</p>
+      <p class="eyebrow">Membership · Kiwanis year October 1, 2026 – September 30, 2027</p>
       <h2 id="join-h">Become a Kiwanian</h2>
-      <p class="lede" style="margin-top:14px">Become a Kiwanis member and support our local children. Come to a Thursday breakfast as our guest first, meet the members, and see what we're working on.</p>
-      <ul>
-        <li>Annual dues, paid to the club Treasurer</li>
-        <li>Pay by check, or by card through Zeffy</li>
-        <li>Ask us about Young Professional and Corporate memberships</li>
-      </ul>
+      <p class="lede" style="margin-top:14px">Become a Kiwanis member and support our local children. Come to a Thursday breakfast as our guest, meet the members, and join us.</p>
+      <ol class="steps">
+        <li>Download the form for your membership level below.</li>
+        <li>Fill it in and choose your payment: a check payable to Kiwanis Club of Longboat Key, Inc., or a credit card (processed securely through Zeffy).</li>
+        <li>Hand it to our Treasurer, Jeff McKee, at any Thursday meeting, or mail it to the address on the form.</li>
+      </ol>
+      <div class="forms">
+        <a class="btn primary" href="kiwanis-membership-application-2026-27.pdf" target="_blank" rel="noopener">Membership form: Individual, Couple, Young Professional (PDF)</a>
+        <a class="btn ghost" href="kiwanis-corporate-membership-2026-27.pdf" target="_blank" rel="noopener">Corporate Membership form (PDF)</a>
+      </div>
+      <p style="margin-top:14px;color:var(--muted);font-size:15px">Questions? Call Danielle Gladding, President, at (941) 539-8535. The Kiwanis Club of Longboat Key, Inc. is a 501(c)(4) civic organization; dues are not tax-deductible as charitable contributions.</p>
     </div>
     <div class="tiers" role="list">
       <div class="tier" role="listitem"><div>Individual<span>One member, one year</span></div><b>$175</b></div>
-      <div class="tier" role="listitem"><div>Couple<span>Two members, one household</span></div><b>$300</b></div>
+      <div class="tier" role="listitem"><div>Couple<span>Two members</span></div><b>$300</b></div>
+      <div class="tier" role="listitem"><div>Young Professional<span>Per person, 40 and under</span></div><b>$125</b></div>
+      <div class="tier" role="listitem"><div>Corporate<span>Per company</span></div><b>$500</b></div>
     </div>
   </section>
 
