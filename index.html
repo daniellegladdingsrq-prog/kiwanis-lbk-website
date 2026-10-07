@@ -101,6 +101,21 @@ p{margin:0}
 .forms{display:grid;gap:12px;margin-top:22px}
 .forms .btn{justify-content:center}
 .steps{margin:18px 0 0;padding-left:22px;display:grid;gap:8px;color:var(--muted)}
+
+.speakers{display:grid;gap:22px}
+.sp-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.sp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;min-width:0}
+.sp img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.sp .ph{width:84px;height:84px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;font:400 30px/1 var(--display);color:var(--gold)}
+.sp .when{font:700 13px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.sp h3{margin:4px 0 2px}
+.sp .role{font-weight:600}
+.sp p{color:var(--muted)}
+.sp .disc{font-size:13px;margin-top:8px}
+.involved{display:grid;gap:22px}
+.inv-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.inv{border-top:3px solid var(--navy);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0}
+.inv p{color:var(--muted)}
 footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:760px){
@@ -118,6 +133,8 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
     <nav class="nav" aria-label="Sections">
       <a href="#meetings">Meetings</a>
       <a href="#events">Events</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#involved">Get involved</a>
       <a href="#causes">Our causes</a>
       <a href="#join">Join</a>
       <a href="#contact">Contact</a>
@@ -177,6 +194,43 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
     </div>
   </section>
 
+  <section class="speakers" id="speakers" aria-labelledby="sp-h">
+    <div>
+      <p class="eyebrow">Thursday mornings</p>
+      <h2 id="sp-h">Guest speakers</h2>
+      <p class="lede" style="margin-top:12px">Most Thursdays a guest joins us to talk about life on the island and the work being done for our community. Guests are welcome at every meeting.</p>
+    </div>
+    <div class="sp-list">
+      <article class="sp">
+        <img src="speaker-george-landry.jpg" alt="George Landry">
+        <div>
+          <p class="when">Up next · Thursday, October 8</p>
+          <h3>George Landry</h3>
+          <p class="role">Town Manager, Town of Longboat Key</p>
+          <p>Longboat Key's twelfth Town Manager shares his vision for the island. George previously served as St. Lucie County Administrator and served twenty years in the U.S. Army.</p>
+          <p class="disc">Disclosure: Club President Danielle Gladding's husband, Nick Gladding, serves on the Longboat Key Town Commission.</p>
+        </div>
+      </article>
+      <article class="sp">
+        <div class="ph" aria-hidden="true">⚾</div>
+        <div>
+          <p class="when">Recent · September 24</p>
+          <h3>Chris Cushman</h3>
+          <p class="role">Executive Director, The Miracle League of Manasota</p>
+          <p>Chris told us about the league's athletes and the volunteer buddies who play alongside them every Saturday.</p>
+        </div>
+      </article>
+      <article class="sp">
+        <div class="ph" aria-hidden="true">K</div>
+        <div>
+          <p class="when">Coming up</p>
+          <h3>More speakers to be announced</h3>
+          <p>Would you like to speak to the club, or suggest a speaker? Call Danielle Gladding at (941) 539-8535.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section id="causes" aria-labelledby="causes-h" style="display:grid;gap:26px">
     <div>
       <p class="eyebrow">Where the money goes</p>
@@ -191,6 +245,19 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
         <h3>The Children's Guardian Fund</h3>
         <p>The 2026 beneficiary of the Lawn Party by the Bay. The fund supports local children in need. The Lawn Party beneficiary is chosen each year.</p>
       </article>
+    </div>
+  </section>
+
+  <section class="involved" id="involved" aria-labelledby="inv-h">
+    <div>
+      <p class="eyebrow">Lend a hand</p>
+      <h2 id="inv-h">Get involved</h2>
+    </div>
+    <div class="inv-list">
+      <article class="inv"><h3>Come to breakfast</h3><p>Join us any Thursday at The Lazy Lobster as our guest. Breakfast at 8:30, meeting at 9:00.</p></article>
+      <article class="inv"><h3>Volunteer at the Pancake Breakfast</h3><p>Saturday, October 24, at The Lazy Lobster. Help serve, greet and raise money for The Miracle League of Manasota.</p></article>
+      <article class="inv"><h3>Sponsor the Lawn Party</h3><p>Sponsorships are still available for the Lawn Party by the Bay on December 5. <a href="https://www.lbklawnparty.org/sponsorshipopportunities" target="_blank" rel="noopener">See sponsorship options</a>.</p></article>
+      <article class="inv"><h3>Become a member</h3><p>Individual, Couple, Young Professional and Corporate memberships. <a href="#join">See membership</a>.</p></article>
     </div>
   </section>
 
