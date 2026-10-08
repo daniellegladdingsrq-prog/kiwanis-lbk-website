@@ -116,6 +116,13 @@ p{margin:0}
 .inv-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .inv{border-top:3px solid var(--navy);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0}
 .inv p{color:var(--muted)}
+
+/* Tab bar, like LBKLawnParty.org: one tab per page */
+.top{flex-direction:column;align-items:stretch;gap:14px;border-bottom:0;padding-bottom:0}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--navy);border-radius:10px;padding:6px}
+.tabs a{color:var(--navy-ink);text-decoration:none;font:600 14px/1 var(--body);padding:10px 11px;border-radius:7px}
+.tabs a:hover{background:rgba(255,255,255,.14)}
+.tabs a[aria-current="page"]{background:var(--gold);color:#14213d}
 footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:760px){
@@ -129,18 +136,8 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="index.html#top" id="top"><img src="logo-420.png" alt="Kiwanis Club of Longboat Key logo"><span>Kiwanis Club<br>of Longboat Key</span></a>
-    <nav class="nav" aria-label="Sections">
-      <a href="index.html#meetings">Meetings</a>
-      <a href="events.html">Upcoming events</a>
-      <a href="index.html#speakers">Speakers</a>
-      <a href="index.html#involved">Get involved</a>
-      <a href="index.html#causes">Our causes</a>
-      <a href="index.html#join">Join</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="https://www.lbklawnparty.org" target="_blank" rel="noopener">Lawn Party</a>
-      <a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook</a>
-    </nav>
+    <a class="brand" href="index.html" id="top"><img src="logo-420.png" alt="Kiwanis Club of Longboat Key logo"><span>Kiwanis Club<br>of Longboat Key</span></a>
+    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html" aria-current="page">Upcoming Events</a><a href="speakers.html">Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="contact.html">Contact</a><a href="https://www.lbklawnparty.org" target="_blank" rel="noopener">Lawn Party ↗</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
   </header>
   <section class="events" aria-labelledby="ev-h" style="padding-top:16px">
     <div>
