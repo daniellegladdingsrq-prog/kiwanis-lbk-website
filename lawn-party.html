@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="logo-420.png">
+<title>Lawn Party by the Bay · Kiwanis Club of Longboat Key</title>
+<meta name="description" content="The Kiwanis Club of Longboat Key serves the children of our community. Weekly breakfast meetings at The Lazy Lobster, the Pancake Breakfast and the Lawn Party by the Bay. Guests welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+body{margin:0}
+/* Layout: a calm civic page in Kiwanis navy and gold. One meeting card up top (the thing people need most), then events, causes, membership and contact. */
+:root{
+  --bg:#f7f8fb; --surface:#ffffff; --ink:#14213d; --muted:#53607a; --line:#dde2ec;
+  --navy:#0b3d91; --navy-ink:#ffffff; --gold:#b08d3c; --gold-soft:#f3ecdc;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d1424; --surface:#141d31; --ink:#eef1f7; --muted:#a9b3c7; --line:#26324c;
+  --navy:#7fa6ee; --navy-ink:#0d1424; --gold:#d9b765; --gold-soft:#2a2414; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d1424; --surface:#141d31; --ink:#eef1f7; --muted:#a9b3c7; --line:#26324c;
+  --navy:#7fa6ee; --navy-ink:#0d1424; --gold:#d9b765; --gold-soft:#2a2414; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);padding-inline:16px;padding-block:0 56px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;gap:56px}
+a{color:var(--navy);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.15}
+h2{font-size:clamp(28px,4.4vw,38px)}
+h3{font-size:22px}
+p{margin:0}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.lede{color:var(--muted);max-width:62ch}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:52px;height:auto}
+.brand span{font:400 19px/1.2 var(--display)}
+.nav{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.nav a{text-decoration:none;color:var(--ink)}
+.nav a:hover{color:var(--navy)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start;padding-top:16px}
+.hero h1{font-size:clamp(38px,6.4vw,64px)}
+.hero h1 em{font-style:normal;color:var(--navy)}
+.hero .lede{margin-top:18px;font-size:19px}
+.since{display:inline-flex;gap:10px;align-items:baseline;margin-top:22px;padding:8px 14px;background:var(--gold-soft);border-radius:999px;font-weight:600;font-size:15px}
+.since b{font:400 20px/1 var(--display);color:var(--gold)}
+
+/* Meeting card: the one element set apart */
+.meeting{background:var(--navy);color:var(--navy-ink);border-radius:14px;padding:26px;display:grid;gap:16px}
+.meeting .eyebrow{color:var(--navy-ink);opacity:.8;margin:0}
+.meeting h3{font-size:26px}
+.meeting dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px}
+.meeting dt{font-weight:700;opacity:.85}
+.meeting dd{margin:0;min-width:0}
+.meeting a{color:var(--navy-ink)}
+.meeting .note{font-size:15px;opacity:.9}
+
+/* Events */
+.events{display:grid;gap:22px}
+.event-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.event{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;gap:10px;align-content:start;min-width:0}
+.date{display:flex;gap:12px;align-items:center}
+.date .day{font:400 34px/1 var(--display);color:var(--navy);font-variant-numeric:tabular-nums}
+.date .mo{font:700 13px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.event p{color:var(--muted)}
+.event .where{color:var(--ink);font-weight:600}
+
+/* Causes */
+.causes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.cause{display:grid;gap:10px;border-top:3px solid var(--gold);padding-top:18px;min-width:0}
+.cause p{color:var(--muted)}
+
+/* Membership */
+.join{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.tiers{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.tier{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.tier:last-child{border-bottom:0}
+.press-list{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.press{padding:18px 20px;border-bottom:1px solid var(--line);display:grid;gap:6px}
+.press:last-child{border-bottom:0}
+.press .when{margin:0;font:700 13px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.press h3{font-size:21px}.press h3 a{color:var(--navy);text-decoration:none}.press h3 a:hover{text-decoration:underline}
+.press p{margin:0}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.gallery figure{margin:0;display:grid;gap:8px}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;border-radius:10px;display:block;background:var(--line)}
+.gallery figcaption{font-size:15px;color:var(--muted)}
+.tier span{color:var(--muted);font-size:15px;display:block}
+.tier b{font:400 24px/1 var(--display);color:var(--navy);font-variant-numeric:tabular-nums;white-space:nowrap}
+.join ul{margin:16px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--muted)}
+
+/* Contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.contact h3{font-size:19px;margin-bottom:6px}
+.contact p{color:var(--muted)}
+.contact .big{font:400 22px/1.3 var(--display);color:var(--ink);user-select:all}
+
+
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--body);text-decoration:none;padding:14px 20px;border-radius:999px;border:2px solid var(--navy)}
+.btn.primary{background:var(--navy);color:var(--navy-ink)}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn:hover{filter:brightness(1.08)}
+.forms{display:grid;gap:12px;margin-top:22px}
+.forms .btn{justify-content:center}
+.steps{margin:18px 0 0;padding-left:22px;display:grid;gap:8px;color:var(--muted)}
+
+.speakers{display:grid;gap:22px}
+.sp-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.sp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;min-width:0}
+.sp img{width:84px;height:84px;border-radius:50%;object-fit:cover}
+.sp .ph{width:84px;height:84px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;font:400 30px/1 var(--display);color:var(--gold)}
+.sp .when{font:700 13px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.sp h3{margin:4px 0 2px}
+.sp .role{font-weight:600}
+.sp p{color:var(--muted)}
+.sp .disc{font-size:13px;margin-top:8px}
+.involved{display:grid;gap:22px}
+.inv-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.inv{border-top:3px solid var(--navy);padding-top:14px;display:grid;gap:6px;align-content:start;min-width:0}
+.inv p{color:var(--muted)}
+
+/* Tab bar, like LBKLawnParty.org: one tab per page */
+.top{flex-direction:column;align-items:stretch;gap:14px;border-bottom:0;padding-bottom:0}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--navy);border-radius:10px;padding:6px}
+.tabs a{color:var(--navy-ink);text-decoration:none;font:600 14px/1 var(--body);padding:10px 11px;border-radius:7px}
+.tabs a:hover{background:rgba(255,255,255,.14)}
+.tabs a[aria-current="page"]{background:var(--gold);color:#14213d}
+footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .hero,.join{grid-template-columns:1fr}
+  .wrap{gap:44px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html" id="top"><img src="logo-420.png" alt="Kiwanis Club of Longboat Key logo"><span>Kiwanis Club<br>of Longboat Key</span></a>
+    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html">Upcoming Events</a><a href="speakers.html">Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="sponsors.html">Sponsors</a><a href="gallery.html">Gallery</a><a href="press.html">In the News</a><a href="contact.html">Contact</a><a href="lawn-party.html" aria-current="page">Lawn Party</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
+  </header>
+  <style>
+  .lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .lp-card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .lp-card h3{margin:0 0 8px}
+  .lp-media{width:100%;height:auto;border-radius:12px;display:block}
+  .lp-video{width:100%;max-width:420px;border-radius:12px;display:block;margin:0 auto;background:#000}
+  .blog-card{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+  .blog-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .blog-card div{padding:16px 18px}
+  .blog-card h3{margin:0 0 6px;font-size:20px}
+  </style>
+  <section style="padding-top:16px;display:grid;gap:14px">
+    <p class="eyebrow">Our signature event · 21st year</p>
+    <h1 style="font-size:clamp(34px,5.6vw,52px)">Lawn Party by the Bay</h1>
+    <p class="lede"><strong>Saturday, December 5, 2026 · 12:00–2:30 PM · Ken Thompson Park, City Island.</strong> Local restaurants, wine, beer, live music and the 50/50 raffle, all for a wonderful cause. Hosted by the Kiwanis Club of Longboat Key. This year's proceeds benefit the Children's Guardian Fund, which cares for children and young adults in foster care in Sarasota, Manatee and DeSoto Counties.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.lbklawnparty.org/admissiontickets" target="_blank" rel="noopener">Buy tickets · $100</a>
+      <a class="btn ghost" href="https://www.zeffy.com/en-US/ticketing/childrens-bounty" target="_blank" rel="noopener">Children's Bounty · $200</a>
+      <a class="btn ghost" href="https://www.zeffy.com/en-US/ticketing/2026-lawn-party-amazing-5050-raffle" target="_blank" rel="noopener">50/50 raffle</a>
+      <a class="btn ghost" href="https://www.lbklawnparty.org/sponsorshipopportunities" target="_blank" rel="noopener">Become a sponsor</a>
+      <a class="btn ghost" href="https://www.lbklawnparty.org" target="_blank" rel="noopener">LBKLawnParty.org ↗</a>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>Thank you to our Diamond Presenting Sponsor</h2>
+    <div class="lp-grid">
+      <img class="lp-media" src="lawn-party-resort-diamond-sponsor.jpg" alt="The Resort at Longboat Key Club, Diamond Presenting Sponsor of the 2026 Lawn Party by the Bay" loading="lazy">
+      <div class="lp-card">
+        <h3>The Resort at Longboat Key Club</h3>
+        <p>The Resort has once again stepped up as our Diamond Presenting Sponsor. Thank you to the Walsh family of Ocean Properties, Rick Konsavage, Managing Director of Resort &amp; Club, and the entire Resort staff for investing in this community and the children the Children's Guardian Fund serves.</p>
+        <p>Thank you to every one of our sponsors. <a href="https://www.lbklawnparty.org/2026sponsors" target="_blank" rel="noopener">See all 2026 sponsors</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>New this year: the Children's Bounty</h2>
+    <div class="lp-card">
+      <p>100 treasure bags at $200 each, and every bag is a winner. Prizes include a package from The St. Regis Longboat Key Resort and a piece of fine jewelry. <a href="https://www.zeffy.com/en-US/ticketing/childrens-bounty" target="_blank" rel="noopener">Get your bag</a> · <a href="https://www.lbklawnparty.org/childrens-bounty-rules" target="_blank" rel="noopener">Rules</a></p>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>Videos</h2>
+    <div class="lp-grid">
+      <div class="lp-card">
+        <video class="lp-video" controls playsinline preload="none" poster="lawn-party-video-finest-poster.jpg" src="lawn-party-video-finest-hand-car-wash.mp4"></video>
+        <h3 style="margin-top:12px">Finest Hand Car Wash supports the Lawn Party</h3>
+        <p>Thank you to The Finest Hand Car Wash for supporting the Lawn Party by the Bay.</p>
+      </div>
+    </div>
+    <p>More videos are on our <a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook page</a>.</p>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>December 6, 2025 · Last year's Lawn Party</h2>
+    <div class="gallery">
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-2025-12-06-1.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-1-thumb.jpg" alt="Volunteers at Ken Thompson Park on City Island" loading="lazy"></a><figcaption>Volunteers at Ken Thompson Park on City Island</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-2025-12-06-2.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-2-thumb.jpg" alt="Danielle Gladding, Michael Garey and Svetlana Ivashchenko at the Lawn Party" loading="lazy"></a><figcaption>Danielle Gladding, Michael Garey and Svetlana Ivachenko at the Lawn Party</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-2025-12-06-3.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-3-thumb.jpg" alt="Catherine Garey and Danielle Gladding at the Lawn Party" loading="lazy"></a><figcaption>Catherine Garey and Danielle Gladding at the Lawn Party</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-2025-12-06-4.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-4-thumb.jpg" alt="Michael Garey, in volunteer green, with a Lawn Party guest" loading="lazy"></a><figcaption>Michael Garey, in volunteer green, with a Lawn Party guest</figcaption></figure>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>$123,900 for the Children's Guardian Fund</h2>
+    <p class="lede">The 2025 Lawn Party raised $123,900 for the Children's Guardian Fund, presented February 5, 2026.</p>
+    <div class="gallery">
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-1.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-1-thumb.jpg" alt="The 2025 Lawn Party total: $123,900 for the Children's Guardian Fund" loading="lazy"></a><figcaption>The 2025 Lawn Party total: $123,900 for the Children's Guardian Fund</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-2.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-2-thumb.jpg" alt="Members and guests with the 2025 Lawn Party results" loading="lazy"></a><figcaption>Members and guests with the 2025 Lawn Party results</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-3.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-3-thumb.jpg" alt="Presenting the 2025 Lawn Party results" loading="lazy"></a><figcaption>Presenting the 2025 Lawn Party results</figcaption></figure>
+      <figure><a href="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-4.jpg" target="_blank" rel="noopener"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-4-thumb.jpg" alt="Danielle Gladding and Michael Garey with the $123,900 total" loading="lazy"></a><figcaption>Danielle Gladding and Michael Garey with the $123,900 total</figcaption></figure>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px">
+    <h2>Read more</h2>
+    <div class="lp-grid">
+      <a class="blog-card" href="https://daniellegladdingco.com/blog/longboat-key-lawn-party" target="_blank" rel="noopener"><div><h3>Longboat Key Lawn Party 2026: Date, Tickets and Charity</h3><p>Everything to know about this year's Lawn Party by the Bay.</p></div></a>
+      <a class="blog-card" href="https://daniellegladdingco.com/blog/kiwanis-club-of-longboat-key" target="_blank" rel="noopener"><div><h3>Kiwanis Club of Longboat Key: History and Lawn Party</h3><p>How the club rebuilt, what it funds, and how the Lawn Party came to be.</p></div></a>
+    </div>
+  </section>
+  <p><a class="btn ghost" href="index.html">← Back to the home page</a></p>
+
+  <footer>
+    <span>© 2026 Kiwanis Club of Longboat Key · A member club of Kiwanis International</span>
+    <span>Everyone welcome. Bring a friend!</span>
+  </footer>
+</div>
+</body>
+</html>
