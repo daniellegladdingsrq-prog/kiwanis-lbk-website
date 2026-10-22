@@ -129,6 +129,18 @@ p{margin:0}
 
 /* Tab bar, like LBKLawnParty.org: one tab per page */
 .top{flex-direction:column;align-items:stretch;gap:14px;border-bottom:0;padding-bottom:0}
+.sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
+.sp-tier .eyebrow{margin:0}
+.logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.logo-row.big{grid-template-columns:minmax(0,420px)}
+.logo{display:grid;gap:8px;align-content:start;justify-items:center;text-align:center;background:#fff;border-radius:10px;padding:14px;color:#1b2333;text-decoration:none;font:600 13px/1.35 var(--body);border:1px solid var(--line)}
+.logo img{width:100%;height:110px;object-fit:contain}
+.logo-row.big .logo img{height:190px}
+.logo.text{align-content:center;min-height:90px;font:400 19px/1.3 var(--display);background:var(--gold-soft);color:var(--ink)}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.media-card{display:grid;gap:10px;align-content:start}
+.media-card iframe{width:100%;aspect-ratio:9/16;border:0;border-radius:12px;background:#000}
+.media-card h3{font-size:19px;margin:0}
 .tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--navy);border-radius:10px;padding:6px}
 .tabs a{color:var(--navy-ink);text-decoration:none;font:600 14px/1 var(--body);padding:10px 11px;border-radius:7px}
 .tabs a:hover{background:rgba(255,255,255,.14)}
@@ -147,7 +159,7 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
 <div class="wrap">
   <header class="top">
     <a class="brand" href="index.html" id="top"><img src="logo-420.png" alt="Kiwanis Club of Longboat Key logo"><span>Kiwanis Club<br>of Longboat Key</span></a>
-    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html">Upcoming Events</a><a href="speakers.html">Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="sponsors.html" aria-current="page">Sponsors</a><a href="gallery.html">Gallery</a><a href="press.html">In the News</a><a href="contact.html">Contact</a><a href="lawn-party.html">Lawn Party</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
+    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html">Upcoming Events</a><a href="speakers.html">Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="sponsors.html" aria-current="page">Sponsors</a><a href="gallery.html">Gallery</a><a href="media.html">Media</a><a href="press.html">In the News</a><a href="contact.html">Contact</a><a href="lawn-party.html">Lawn Party</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
   </header>
   <section style="padding-top:16px;display:grid;gap:14px">
     <p class="eyebrow">Thank you</p>
@@ -155,19 +167,24 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
     <p class="lede">The work we do for local children is made possible by the businesses, organizations and neighbors who sponsor our events. Please thank them and support them.</p>
   </section>
 
-  <section style="display:grid;gap:22px">
+  <section style="display:grid;gap:22px" aria-labelledby="lp-sponsors-h">
     <div>
       <p class="eyebrow">Lawn Party by the Bay · 2026</p>
-      <h2>Lawn Party sponsors</h2>
+      <h2 id="lp-sponsors-h">Our 2026 Lawn Party sponsors</h2>
     </div>
-    <div class="tiers" role="list">
-      <div class="tier" role="listitem"><div>Platinum<span>Ken Schneier &amp; Cynthia Craig</span></div></div>
-      <div class="tier" role="listitem"><div>Gold<span>The Jeffrey P. McKee Foundation · The Robert E. Dods Family Foundation</span></div></div>
-      <div class="tier" role="listitem"><div>Event Tray<span>Monica Verinder, REALTOR®, Coldwell Banker Realty</span></div></div>
-      <div class="tier" role="listitem"><div>Official Media<span>Longboat Observer</span></div></div>
-      <div class="tier" role="listitem"><div>Bronze<span>Hank &amp; Melinda Foster · Eric &amp; Emily Hargan · Michelle Johnson, Financial Advisor at Edward Jones · Secur-All Insurance Agency · MIC Insurance</span></div></div>
-    </div>
-    <p>See every 2026 sponsor, with logos, at <a href="https://www.lbklawnparty.org/2026sponsors" target="_blank" rel="noopener">LBKLawnParty.org/2026sponsors</a>. Sponsorships are still available: <a href="https://www.lbklawnparty.org/sponsorshipopportunities" target="_blank" rel="noopener">see sponsorship options</a>.</p>
+    <p class="lede">Lawn Party by the Bay is made possible by the generosity of our sponsors. Please thank them and support them.</p>
+    <div class="sp-tier"><p class="eyebrow">Diamond Presenting Sponsor</p><div class="logo-row big"><div class="logo"><img src="sponsor-logos/resort-at-longboat-key-club.jpg" alt="The Resort at Longboat Key Club" loading="lazy"><span>The Resort at Longboat Key Club</span></div></div></div>
+    <div class="sp-tier"><p class="eyebrow">Platinum Sponsor</p><div class="logo-row"><div class="logo text">Ken Schneier &amp; Cynthia Craig</div></div></div>
+    <div class="sp-tier"><p class="eyebrow">Gold Sponsors</p><div class="logo-row"><div class="logo text">The Jeffrey P. McKee Foundation</div><div class="logo text">The Robert E. Dods Family Foundation</div></div></div>
+    <div class="sp-tier"><p class="eyebrow">Silver Sponsors</p><div class="logo-row"><a class="logo" href="https://www.lbkfoundation.org" target="_blank" rel="noopener"><img src="sponsor-logos/longboat-key-foundation.jpg" alt="Longboat Key Foundation" loading="lazy"><span>Longboat Key Foundation</span></a><a class="logo" href="https://www.longwealthadvisory.com" target="_blank" rel="noopener"><img src="sponsor-logos/stifel-lebaron-long-wealth.jpg" alt="Stifel: LeBaron Wealth Advisory Group and Long Wealth Advisory Group" loading="lazy"><span>Stifel: LeBaron Wealth Advisory Group and Long Wealth Advisory Group</span></a></div></div>
+    <div class="sp-tier"><p class="eyebrow">Children's Bounty Sponsor</p><div class="logo-row"><a class="logo" href="https://daniellegladdingco.com" target="_blank" rel="noopener"><img src="sponsor-logos/danielle-gladding-co-realty.jpg" alt="Danielle Gladding &amp; Co. Realty" loading="lazy"><span>Danielle Gladding &amp; Co. Realty</span></a></div></div>
+    <div class="sp-tier"><p class="eyebrow">T-Shirt Sponsor</p><div class="logo-row"><a class="logo" href="https://bristahomes.com" target="_blank" rel="noopener"><img src="sponsor-logos/brista-homes.jpg" alt="Brista Homes" loading="lazy"><span>Brista Homes</span></a></div></div>
+    <div class="sp-tier"><p class="eyebrow">Event Program Sponsor</p><div class="logo-row"><a class="logo" href="https://www.experiencegoodwill.org" target="_blank" rel="noopener"><img src="sponsor-logos/goodwill-manasota.jpg" alt="Goodwill Manasota" loading="lazy"><span>Goodwill Manasota</span></a></div></div>
+    <div class="sp-tier"><p class="eyebrow">Event Tray Sponsor</p><div class="logo-row"><div class="logo text">Monica Verinder, REALTOR®<br>Coldwell Banker Realty</div></div></div>
+    <div class="sp-tier"><p class="eyebrow">Official Media Sponsor</p><div class="logo-row"><a class="logo" href="https://www.yourobserver.com" target="_blank" rel="noopener"><img src="sponsor-logos/observer.jpg" alt="Longboat Observer" loading="lazy"><span>Longboat Observer</span></a></div></div>
+    <div class="sp-tier"><p class="eyebrow">Bronze Sponsors</p><div class="logo-row"><div class="logo text">Hank &amp; Melinda Foster</div><div class="logo text">Eric &amp; Emily Hargan</div><div class="logo text">Michelle Johnson, Financial Advisor at Edward Jones</div><div class="logo text">Secur-All Insurance Agency</div><div class="logo text">MIC Insurance</div></div></div>
+    <div class="sp-tier"><p class="eyebrow">In-kind Sponsors</p><div class="logo-row"><div class="logo"><img src="sponsor-logos/publix.jpg" alt="Publix" loading="lazy"><span>Publix</span></div><div class="logo"><img src="sponsor-logos/carl-reynolds-law.jpg" alt="Carl Reynolds Law" loading="lazy"><span>Carl Reynolds Law</span></div><div class="logo"><img src="sponsor-logos/universal-orlando-resort.jpg" alt="Universal Orlando Resort" loading="lazy"><span>Universal Orlando Resort</span></div><div class="logo"><img src="sponsor-logos/gold-coast-eagle.jpg" alt="Gold Coast Eagle Distributing" loading="lazy"><span>Gold Coast Eagle Distributing</span></div><div class="logo"><img src="sponsor-logos/waste-management.jpg" alt="Waste Management" loading="lazy"><span>Waste Management</span></div><div class="logo"><img src="sponsor-logos/us-tent-rental.jpg" alt="U.S. Tent Rental" loading="lazy"><span>U.S. Tent Rental</span></div></div></div>
+    <p>Sponsorships are still available. <a href="lawn-party.html#sponsor">See sponsorship levels</a>.</p>
   </section>
 
   <section style="display:grid;gap:22px">
@@ -176,7 +193,7 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
       <h2>Sponsorship levels</h2>
     </div>
     <div class="tiers" role="list">
-      <div class="tier" role="listitem"><div>Diamond<span>5 patron tables (50 guests) · premier recognition on all event materials · logo on raffle tickets · top billing on website, print and digital · dedicated stage recognition · branded tent space</span></div><b>$20,000</b></div>
+      <div class="tier" role="listitem"><div>Diamond Presenting<span>Taken · thank you, The Resort at Longboat Key Club · 5 patron tables (50 guests) · premier recognition on all event materials · logo on raffle tickets · top billing on website, print and digital · dedicated stage recognition · branded tent space</span></div><b>$20,000</b></div>
       <div class="tier" role="listitem"><div>Platinum<span>4 patron tables (40 guests) · prominent logo on event materials · recognition in program, social media and press · acknowledgment during the program · branded tent space</span></div><b>$15,000</b></div>
       <div class="tier" role="listitem"><div>Gold<span>3 patron tables (30 guests) · logo on website, flyers and program · branded tent space · social media recognition</span></div><b>$10,000</b></div>
       <div class="tier" role="listitem"><div>Silver<span>2 patron tables (20 guests) · branded tent space · website presence · shared event signage · recognition in printed program</span></div><b>$5,000</b></div>
