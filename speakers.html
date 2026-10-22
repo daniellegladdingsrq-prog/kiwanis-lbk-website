@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" href="logo-420.png">
-<title>Guest Speakers · Kiwanis Club of Longboat Key</title>
+<title>Meetings & Guest Speakers · Kiwanis Club of Longboat Key</title>
 <meta name="description" content="The Kiwanis Club of Longboat Key serves the children of our community. Weekly breakfast meetings at The Lazy Lobster, the Pancake Breakfast and the Lawn Party by the Bay. Guests welcome.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Source+Sans+3:wght@400;600;700&display=swap">
@@ -129,6 +129,9 @@ p{margin:0}
 
 /* Tab bar, like LBKLawnParty.org: one tab per page */
 .top{flex-direction:column;align-items:stretch;gap:14px;border-bottom:0;padding-bottom:0}
+.lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.lp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.lp-card h3{margin:0 0 8px}
 .sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
 .sp-tier .eyebrow{margin:0}
 .logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
@@ -159,44 +162,79 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
 <div class="wrap">
   <header class="top">
     <a class="brand" href="index.html" id="top"><img src="logo-420.png" alt="Kiwanis Club of Longboat Key logo"><span>Kiwanis Club<br>of Longboat Key</span></a>
-    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html">Upcoming Events</a><a href="speakers.html" aria-current="page">Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="sponsors.html">Sponsors</a><a href="gallery.html">Gallery</a><a href="media.html">Media</a><a href="press.html">In the News</a><a href="contact.html">Contact</a><a href="lawn-party.html">Lawn Party</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
+    <nav class="tabs" aria-label="Pages"><a href="index.html">Home</a><a href="events.html">Upcoming Events</a><a href="meetings.html">Meetings & Speakers</a><a href="get-involved.html">Get Involved</a><a href="causes.html">Our Causes</a><a href="membership.html">Membership</a><a href="sponsors.html">Sponsors</a><a href="gallery.html">Gallery</a><a href="media.html">Media</a><a href="press.html">In the News</a><a href="contact.html">Contact</a><a href="lawn-party.html">Lawn Party</a><a href="blog.html">Blog</a><a href="https://www.facebook.com/KiwanisClubLBK" target="_blank" rel="noopener">Facebook ↗</a></nav>
   </header>
-<div style="padding-top:16px"></div>
-  <section class="speakers" id="speakers" aria-labelledby="sp-h">
+  <section style="padding-top:16px;display:grid;gap:14px">
+    <p class="eyebrow">Every Thursday morning</p>
+    <h1 style="font-size:clamp(34px,5.6vw,52px)">Meetings &amp; guest speakers</h1>
+    <p class="lede">The Kiwanis Club of Longboat Key meets for breakfast every Thursday at The Lazy Lobster, 5350 Gulf of Mexico Drive, Longboat Key. Breakfast is at 8:30 and the meeting starts at 9:00. Guests are always welcome, and breakfast is $20 for guests.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:michael@lazylobsterlbk.com?subject=Kiwanis%20breakfast%20RSVP">RSVP to Michael Garey</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=The+Lazy+Lobster+5350+Gulf+of+Mexico+Drive+Longboat+Key+FL" target="_blank" rel="noopener">Directions</a>
+      <a class="btn ghost" href="events.html">Upcoming events</a>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:18px" aria-labelledby="mt-h">
+    <div><p class="eyebrow">What to expect</p><h2 id="mt-h">A Thursday morning with the club</h2></div>
+    <div class="lp-grid">
+      <div class="lp-card"><h3>8:30 · Breakfast</h3><p>Coffee, breakfast and conversation with neighbors at The Lazy Lobster.</p></div>
+      <div class="lp-card"><h3>9:00 · Call to order</h3><p>The Pledge of Allegiance, a song, an invocation, and a welcome to members and guests.</p></div>
+      <div class="lp-card"><h3>Guest speaker</h3><p>A leader from our island or our region talks about the work being done for our community and its children.</p></div>
+      <div class="lp-card"><h3>Club business</h3><p>Updates on our service projects and fundraisers, from the Pancake Breakfast to the Lawn Party by the Bay, and the Ace in the Hole drawing.</p></div>
+    </div>
+    <p>Please RSVP to Michael Garey at <a href="mailto:michael@lazylobsterlbk.com">michael@lazylobsterlbk.com</a> so the kitchen can plan. Bring a friend!</p>
+  </section>
+
+  <section class="speakers" aria-labelledby="sp-h">
     <div>
-      <p class="eyebrow">Thursday mornings</p>
-      <h2 id="sp-h">Guest speakers</h2>
-      <p class="lede" style="margin-top:12px">At our meetings, guests join us to talk about life on the island and the work being done for our community. Guests are welcome at every meeting.</p>
+      <p class="eyebrow">Guest speakers</p>
+      <h2 id="sp-h">Who we've heard from</h2>
     </div>
     <div class="sp-list">
       <article class="sp">
+        <div class="ph" aria-hidden="true">K</div>
+        <div>
+          <p class="when">Up next</p>
+          <h3>Guest speaker to be announced</h3>
+          <p>Would you like to speak to the club, or suggest a speaker? Call Danielle Gladding, President, at <a href="tel:+19415398535">(941) 539-8535</a>.</p>
+        </div>
+      </article>
+      <article class="sp">
+        <div class="ph" aria-hidden="true">CGF</div>
+        <div>
+          <p class="when">Thursday, October 22</p>
+          <h3>Andre Sampson</h3>
+          <p class="role">Board Chair, Children's Guardian Fund</p>
+          <p>Andre spoke about the Children's Guardian Fund, which supports children and young adults in foster care in Sarasota, Manatee and DeSoto counties and is the beneficiary of this year's <a href="lawn-party.html">Lawn Party by the Bay</a>.</p>
+        </div>
+      </article>
+      <article class="sp">
         <img src="speaker-george-landry.jpg" alt="George Landry">
         <div>
-          <p class="when">Recent · Thursday, October 8</p>
+          <p class="when">Thursday, October 8</p>
           <h3>George Landry</h3>
           <p class="role">Town Manager, Town of Longboat Key</p>
+          <p class="disc">Disclosure: Danielle Gladding's husband, Nick Gladding, serves as Longboat Key's District 3 Town Commissioner. They speak for themselves and not for each other, and nothing here represents the Town of Longboat Key or its Commission.</p>
           <p>Longboat Key's twelfth Town Manager shared his vision for the island. George previously served as St. Lucie County Administrator and served twenty years in the U.S. Army.</p>
-          <p class="disc">Disclosure: Club President Danielle Gladding's husband, Nick Gladding, serves on the Longboat Key Town Commission.</p>
         </div>
       </article>
       <article class="sp">
         <img src="speaker-chris-cushman.jpg" alt="Chris Cushman">
         <div>
-          <p class="when">Recent · September 24</p>
+          <p class="when">September 24</p>
           <h3>Chris Cushman</h3>
           <p class="role">Executive Director, The Miracle League of Manasota</p>
-          <p>Chris told us about the league's athletes and the volunteer buddies who play alongside them every Saturday.</p>
-        </div>
-      </article>
-      <article class="sp">
-        <div class="ph" aria-hidden="true">K</div>
-        <div>
-          <p class="when">Up next · Thursday, October 22</p>
-          <h3>Guest speaker to be announced</h3>
-          <p>Would you like to speak to the club, or suggest a speaker? Call Danielle Gladding at (941) 539-8535.</p>
+          <p>Chris told us about the league's athletes and the volunteer buddies who play alongside them every Saturday. The Miracle League is the beneficiary of our <a href="events.html">Pancake Breakfast</a>.</p>
         </div>
       </article>
     </div>
+  </section>
+
+  <section style="display:grid;gap:12px">
+    <h2>Join us for breakfast</h2>
+    <p class="lede">The best way to get to know the club is to come to a Thursday breakfast. When you're ready, you can <a href="membership.html">become a member</a> online.</p>
+    <div class="btns"><a class="btn primary" href="membership.html">Become a member</a><a class="btn ghost" href="contact.html">Contact us</a></div>
   </section>
 
   <footer>
