@@ -132,6 +132,15 @@ p{margin:0}
 .lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .lp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 .lp-card h3{margin:0 0 8px}
+.fun{display:grid;gap:18px}
+.fun-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;padding:6px}
+.fun-grid figure{margin:0;background:#fff;padding:10px 10px 14px;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.14);transform:rotate(-2deg);transition:transform .2s}
+.fun-grid figure:nth-child(even){transform:rotate(2deg)}
+.fun-grid figure:hover{transform:rotate(0) scale(1.03)}
+.fun-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.fun-grid figcaption{font:600 13px/1.35 var(--body);color:#1b2333;text-align:center;margin-top:10px}
+.note-change{font-size:14px;color:var(--muted);border-left:3px solid var(--gold);padding-left:12px}
+@media (prefers-reduced-motion:reduce){.fun-grid figure,.fun-grid figure:nth-child(even){transform:none;transition:none}}
 .sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
 .sp-tier .eyebrow{margin:0}
 .logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
@@ -186,9 +195,9 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
         <dt>Breakfast</dt><dd>8:30 AM</dd>
         <dt>Meeting</dt><dd>9:00 AM</dd>
         <dt>Where</dt><dd>The Lazy Lobster<br>5350 Gulf of Mexico Drive<br>Longboat Key, FL 34228</dd>
-        <dt>Cost</dt><dd>$15 members · $20 guests</dd>
+        <dt>Cost</dt><dd>Members: breakfast included<br>Guests: $20</dd>
       </dl>
-      <p class="note">Dates occasionally change for holidays. <a href="events.html">See upcoming meeting dates →</a></p>
+      <p class="note">Dates, speakers and prices are subject to change. <a href="events.html">See upcoming meeting dates →</a></p>
       <p class="note">Guests are always welcome. Bring a friend! RSVP to Michael Garey at <a href="mailto:michael@lazylobsterlbk.com">michael@lazylobsterlbk.com</a> so the kitchen can plan.</p>
     </aside>
   </section>
@@ -220,6 +229,19 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
         <p>Watch the club and The Miracle League of Manasota on ABC7's Suncoast View, talking about our partnership and the Pancake Breakfast. <a href="https://www.mysuncoast.com/2026/10/19/sponsored-segment-pancake-breakfast-benefiting-miracle-league-manasota/" target="_blank" rel="noopener">Watch the segment</a>.</p>
       </article>
     </div>
+  </section>
+
+  <section class="fun" aria-labelledby="fun-h">
+    <div><p class="eyebrow">Come see for yourself</p><h2 id="fun-h">Friends, breakfast and a whole lot of fun</h2></div>
+    <div class="fun-grid">
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-officer-installation-2026-10-08-1.jpg" alt="Officer installation, October 2026" loading="lazy"></a><figcaption>Officer installation, October 2026</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-meeting-speaker-2026-09-24-2.jpg" alt="Breakfast with The Miracle League" loading="lazy"></a><figcaption>Breakfast with The Miracle League</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-1.jpg" alt="Lawn Party volunteers, 2025" loading="lazy"></a><figcaption>Lawn Party volunteers, 2025</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lazy-lobster-2026-09-23-1.jpg" alt="Thursday mornings at The Lazy Lobster" loading="lazy"></a><figcaption>Thursday mornings at The Lazy Lobster</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-3.jpg" alt="$123,900 for the Children's Guardian Fund" loading="lazy"></a><figcaption>$123,900 for the Children's Guardian Fund</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-4.jpg" alt="Lawn Party fun, 2025" loading="lazy"></a><figcaption>Lawn Party fun, 2025</figcaption></figure>
+    </div>
+    <p><a href="gallery.html">See the full photo gallery →</a></p>
   </section>
 
 

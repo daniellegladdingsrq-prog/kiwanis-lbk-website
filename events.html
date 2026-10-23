@@ -132,6 +132,15 @@ p{margin:0}
 .lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .lp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 .lp-card h3{margin:0 0 8px}
+.fun{display:grid;gap:18px}
+.fun-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;padding:6px}
+.fun-grid figure{margin:0;background:#fff;padding:10px 10px 14px;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.14);transform:rotate(-2deg);transition:transform .2s}
+.fun-grid figure:nth-child(even){transform:rotate(2deg)}
+.fun-grid figure:hover{transform:rotate(0) scale(1.03)}
+.fun-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.fun-grid figcaption{font:600 13px/1.35 var(--body);color:#1b2333;text-align:center;margin-top:10px}
+.note-change{font-size:14px;color:var(--muted);border-left:3px solid var(--gold);padding-left:12px}
+@media (prefers-reduced-motion:reduce){.fun-grid figure,.fun-grid figure:nth-child(even){transform:none;transition:none}}
 .sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
 .sp-tier .eyebrow{margin:0}
 .logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
@@ -169,14 +178,15 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
     <div>
       <p class="eyebrow">Mark your calendar</p>
       <h1 id="ev-h" style="font-size:clamp(34px,5.6vw,52px)">Upcoming meetings and events</h1>
-      <p class="lede" style="margin-top:14px">Our breakfast meetings are on the second and fourth Thursday of each month at The Lazy Lobster, 5350 Gulf of Mexico Drive, Longboat Key. Breakfast is at 8:30 and the meeting starts at 9:00. Guests are always welcome. Dates occasionally change for holidays, so please check this page or RSVP to Michael Garey at michael@lazylobsterlbk.com before you come.</p>
+      <p class="lede" style="margin-top:14px">Our breakfast meetings are on the second and fourth Thursday of each month at The Lazy Lobster, 5350 Gulf of Mexico Drive, Longboat Key. Breakfast is at 8:30 and the meeting starts at 9:00. Breakfast is included for members, and guests are always welcome for $20. RSVP to Michael Garey at michael@lazylobsterlbk.com.</p>
+      <p class="note-change">Meeting dates, speakers and prices are subject to change. Please check <a href="events.html">Upcoming events</a> or RSVP before you come.</p>
     </div>
     <div class="event-list">
       <article class="event">
         <div class="date"><span class="day">22</span><span class="mo">October<br>Thursday</span></div>
         <h3>Club meeting: welcome, Christen Benson</h3>
         <p class="where">The Lazy Lobster · Breakfast 8:30, meeting 9:00</p>
-        <p>Our guest is Christen Benson, the new Executive Director of the Children's Guardian Fund, this year's Lawn Party beneficiary. Christen brings more than a decade of nonprofit leadership in Sarasota and Manatee Counties. Guests welcome; breakfast is $20 for guests. RSVP to Michael Garey at michael@lazylobsterlbk.com.</p>
+        <p>Our guest is Christen Benson, the new Executive Director of the Children's Guardian Fund, this year's Lawn Party beneficiary. Christen brings more than a decade of nonprofit leadership in Sarasota and Manatee Counties. Breakfast is included for members; guests are welcome for $20. RSVP to Michael Garey at michael@lazylobsterlbk.com.</p>
         <img class="flyer" src="flyer-christen-benson-2026-10-22.jpg" alt="Kiwanis Club of Longboat Key welcomes Christen Benson, Thursday, October 22, 8:30 a.m. at The Lazy Lobster" loading="lazy">
       </article>
       <article class="event">

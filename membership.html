@@ -132,6 +132,15 @@ p{margin:0}
 .lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .lp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 .lp-card h3{margin:0 0 8px}
+.fun{display:grid;gap:18px}
+.fun-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;padding:6px}
+.fun-grid figure{margin:0;background:#fff;padding:10px 10px 14px;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.14);transform:rotate(-2deg);transition:transform .2s}
+.fun-grid figure:nth-child(even){transform:rotate(2deg)}
+.fun-grid figure:hover{transform:rotate(0) scale(1.03)}
+.fun-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.fun-grid figcaption{font:600 13px/1.35 var(--body);color:#1b2333;text-align:center;margin-top:10px}
+.note-change{font-size:14px;color:var(--muted);border-left:3px solid var(--gold);padding-left:12px}
+@media (prefers-reduced-motion:reduce){.fun-grid figure,.fun-grid figure:nth-child(even){transform:none;transition:none}}
 .sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
 .sp-tier .eyebrow{margin:0}
 .logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}

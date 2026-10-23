@@ -132,6 +132,15 @@ p{margin:0}
 .lp-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .lp-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
 .lp-card h3{margin:0 0 8px}
+.fun{display:grid;gap:18px}
+.fun-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;padding:6px}
+.fun-grid figure{margin:0;background:#fff;padding:10px 10px 14px;border-radius:6px;box-shadow:0 8px 22px rgba(0,0,0,.14);transform:rotate(-2deg);transition:transform .2s}
+.fun-grid figure:nth-child(even){transform:rotate(2deg)}
+.fun-grid figure:hover{transform:rotate(0) scale(1.03)}
+.fun-grid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.fun-grid figcaption{font:600 13px/1.35 var(--body);color:#1b2333;text-align:center;margin-top:10px}
+.note-change{font-size:14px;color:var(--muted);border-left:3px solid var(--gold);padding-left:12px}
+@media (prefers-reduced-motion:reduce){.fun-grid figure,.fun-grid figure:nth-child(even){transform:none;transition:none}}
 .sp-tier{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
 .sp-tier .eyebrow{margin:0}
 .logo-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
@@ -167,7 +176,8 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
   <section style="padding-top:16px;display:grid;gap:14px">
     <p class="eyebrow">Second and fourth Thursdays</p>
     <h1 style="font-size:clamp(34px,5.6vw,52px)">Meetings &amp; guest speakers</h1>
-    <p class="lede">The Kiwanis Club of Longboat Key meets for breakfast on the second and fourth Thursday of each month at The Lazy Lobster, 5350 Gulf of Mexico Drive, Longboat Key. Breakfast is at 8:30 and the meeting starts at 9:00. Guests are always welcome, and breakfast is $20 for guests. Dates occasionally change for holidays, so please check <a href="events.html">Upcoming events</a> or RSVP before you come.</p>
+    <p class="lede">The Kiwanis Club of Longboat Key meets for breakfast on the second and fourth Thursday of each month at The Lazy Lobster, 5350 Gulf of Mexico Drive, Longboat Key. Breakfast is at 8:30 and the meeting starts at 9:00. Breakfast is included for members, and guests are always welcome for $20.</p>
+    <p class="note-change">Meeting dates, speakers and prices are subject to change. Please check <a href="events.html">Upcoming events</a> or RSVP before you come.</p>
     <div class="btns">
       <a class="btn primary" href="mailto:michael@lazylobsterlbk.com?subject=Kiwanis%20breakfast%20RSVP">RSVP to Michael Garey</a>
       <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=The+Lazy+Lobster+5350+Gulf+of+Mexico+Drive+Longboat+Key+FL" target="_blank" rel="noopener">Directions</a>
@@ -175,10 +185,23 @@ footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font
     </div>
   </section>
 
+  <section class="fun" aria-labelledby="fun-h">
+    <div><p class="eyebrow">Come see for yourself</p><h2 id="fun-h">Friends, breakfast and a whole lot of fun</h2></div>
+    <div class="fun-grid">
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-officer-installation-2026-10-08-1.jpg" alt="Officer installation, October 2026" loading="lazy"></a><figcaption>Officer installation, October 2026</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-meeting-speaker-2026-09-24-2.jpg" alt="Breakfast with The Miracle League" loading="lazy"></a><figcaption>Breakfast with The Miracle League</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-1.jpg" alt="Lawn Party volunteers, 2025" loading="lazy"></a><figcaption>Lawn Party volunteers, 2025</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lazy-lobster-2026-09-23-1.jpg" alt="Thursday mornings at The Lazy Lobster" loading="lazy"></a><figcaption>Thursday mornings at The Lazy Lobster</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-check-2026-02-05-3.jpg" alt="$123,900 for the Children's Guardian Fund" loading="lazy"></a><figcaption>$123,900 for the Children's Guardian Fund</figcaption></figure>
+      <figure><a href="gallery.html"><img src="gallery/kiwanis-lbk-lawn-party-2025-12-06-4.jpg" alt="Lawn Party fun, 2025" loading="lazy"></a><figcaption>Lawn Party fun, 2025</figcaption></figure>
+    </div>
+    <p><a href="gallery.html">See the full photo gallery →</a></p>
+  </section>
+
   <section style="display:grid;gap:18px" aria-labelledby="mt-h">
     <div><p class="eyebrow">What to expect</p><h2 id="mt-h">A Thursday morning with the club</h2></div>
     <div class="lp-grid">
-      <div class="lp-card"><h3>8:30 · Breakfast</h3><p>Coffee, breakfast and conversation with neighbors at The Lazy Lobster.</p></div>
+      <div class="lp-card"><h3>8:30 · Breakfast</h3><p>Coffee, breakfast and conversation with neighbors at The Lazy Lobster. Included for members.</p></div>
       <div class="lp-card"><h3>9:00 · Call to order</h3><p>The Pledge of Allegiance, a song, an invocation, and a welcome to members and guests.</p></div>
       <div class="lp-card"><h3>Guest speaker</h3><p>A leader from our island or our region talks about the work being done for our community and its children.</p></div>
       <div class="lp-card"><h3>Club business</h3><p>Updates on our service projects and fundraisers, from the Pancake Breakfast to the Lawn Party by the Bay, and the Ace in the Hole drawing.</p></div>
